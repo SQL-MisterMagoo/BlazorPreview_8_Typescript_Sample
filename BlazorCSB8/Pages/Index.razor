@@ -5,3 +5,18 @@
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+<a href="#Bar" onclick="event.stopPropagation();" @onmouseup="MyMouseHandler">Bar (@ClickCount)</a>
+
+<div style="min-height:100vh;background-color:aliceblue;">This is big</div>
+
+<div id="Bar">I am Bar!</div>
+
+@code
+{
+    int ClickCount = 0;
+    void MyMouseHandler(UIMouseEventArgs args)
+    {
+        ClickCount++;
+    }
+}
